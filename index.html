@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<link href="./project.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexming.css');
+    </style>
+      
+		<title>Bojji's Canvas</title>
+    <link rel="icon" href="./src/title.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/title.png" type="image/x-icon">
+	</head>
+	<body>
+    <canvas  width="1000px" height="500px" id="art"></canvas>
+    <div id="buttons">
+      <img src="./src/reset_icon.png" id="reset" value="Reset"></button>
+      <img src="./src/pencil_icon.png" id="brush_mode" value="Pencil" onclick="change_brush()">
+      <img src="./src/eraser_icon.png" id="eraser_mode" value="Eraser" onclick='erase()'>
+      <img src="./src/chinese_icon.png" id="brush2_mode" value="Chinese brush" onclick='change_brush2()'>
+      <img src="./src/spray_icon.png" id="spray_mode" value="Spray" onclick='change_spray()'>
+      <img src="./src/redo.png" id="undo" value="Undo" onclick="cUndo()">
+      <img src="./src/undo.png" id="redo" value="Redo" onclick='cRedo()'>
+      <img src="./src/circle_icon.png" id="circle" value="Circle" onclick='change_circle()'>
+      <img src="./src/rectangle_icon.png" id="rectangle" value="Rectangle" onclick='change_rectangle()'>
+      <img src="./src/triangle_icon.png" id="triangle" value="Triangle" onclick='change_triangle()'>
+      <img src="./src/text_icon.png" id="text" value="Text" onclick='change_text()'>
+      <img src="./src/download.png" id="save2" value="Download" onclick='download()'>
+      <label for="imageLoader" id="upload"><img src="./src/upload.png"></label>
+      <input type="file" id="imageLoader" name="imageLoader"/>
+      
+      <!--<input type="button" id="upload" value="Upload" onclick='upload()'></button>-->
+      <!-- <a id="save" href="#" download="canvos.png" >Save Canvas</a> -->
+    </div>
+    <select id="font_size">font-size
+      <option value="8">8</option>
+      <option value="10">10</option>
+      <option value="12">12</option>
+      <option value="14">14</option>
+      <option value="16">16</option>
+      <option value="18">18</option>
+      <option value="24">24</option>
+      <option value="48">48</option>
+      <option value="64">64</option>
+      <option value="100">100</option>
+
+    </select>
+    <select id="font_family">font-family
+      <option value="arial" style="font-family:arial;">Arial</option>
+      <option value="monospace" style="font-family:monospace;">Monospace</option>
+      <option value="Impact" style="font-family:Impact;">Impact</option>
+      <option value="Times New Roman" style="font-family:Times New Roman;">Times New Roman</option>
+      <option value="Papyrus" style="font-family:Papyrus;">Papyrus</option>
+      <option value="Microsoft JhengHei " style="font-family:Microsoft JhengHei ;">微軟正黑體</option>
+      <option value="DFKai-SB" style="font-family:DFKai-SB;">標楷體</option>
+      <option value="cwTeXYen" style="font-family:cwTeXYen;">圓體</option>
+      <option value="cwTeXFangSong" style="font-family:cwTeXFangSong;">仿宋體</option>
+      <option value="cwTeXMing" style="font-family:cwTeXMing;">明體</option>
+    </select>
+    <label for="colorpicker" id="color"><img src="./src/colorpicker.png"></label>
+    <input type="color" id="colorpicker" value="#684b4b">
+    <div id="size_range">
+    <img src="./src/pencil.png"><input id="size" type="range" name="points" min="0" max="50" value="10">
+    </div>
+    <div id="density_range">
+    <P>Density:<input id="den" type="range" name="points" min="20" max="250" value="60"></P>
+    </div>
+    <P id="title">Bojji's Canvas</P>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="./src/boji.png" id="boji"></a>
+    <audio src="./src/music.mp3" controls id="audio"></audio>
+    <script src="./project.js"> </script>
+	</body>
